@@ -1,5 +1,5 @@
 <nav class="navbar  navbar-dark bg-dark navbar-expand-lg ">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#">BLOGS</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -9,10 +9,10 @@
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="#">Trending</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link" href="#">New Posts</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -26,3 +26,11 @@
     </ul>
   </div>
 </nav>
+<% if (locals.error) { %>
+  <div class="container">
+    <div class="alert alert-danger" role="alert">
+      Wrong Email or Password !!!
+    </div>
+  </div>
+ 
+<% } %>

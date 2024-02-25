@@ -1,20 +1,32 @@
 const express = require("express");
-const PORT = 900;
+const PORT = 700;
 const path = require("path")
-
+const router = require("./routes/user")
 const ejs = require("ejs")
-const app = express();
+const mongoose = require("mongoose")
+const CookieParser = require("cookie-parser");
+const { checkForAuthenticationCookie } = require("./middlewares/authentication");
 
+
+const app = express();
+mongoose.connect("mongodb://localhost:27017/blogs").then(console.log("Mongodb Connected")).catch((err)=>{console.log(err)})
 app.use(express.urlencoded({ extended: false }))
+app.use(CookieParser())
+app.use(checkForAuthenticationCookie("token"));
+
+
 app.set("view engine", "ejs")
 app.set("views", path.resolve("./views"))
 app.get("/",(req,res)=>{
-    res.render("index")
+    res.render("index",{
+        user:req.user,
+    })
 })
-
+app.use("/user",router);
 
 
 
 app.listen(PORT, (err) => {
+    console.log(err)
 
 })
