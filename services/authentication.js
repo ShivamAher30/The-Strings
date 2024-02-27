@@ -5,6 +5,7 @@ function CreateUsertoken(user)
     const payload = {
         _id : user._id,
         email:user.email,
+        fullname:user.fullname,
         profileImageURl : user.profileImageURl,
         role:user.role
     };

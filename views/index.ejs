@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%-include('./partials/head') %>
-<body> 
-    <%-include('./partials/nav')%>
-    <%=JSON.stringify(user)%>
-    
-   
-    <%-include('./partials/script') %>
+<%-include('./partials/head') %>
 
-</body>
+    <body>
+        <%-include('./partials/nav')%>
+        <div class="container mt-3">
+            <% blog.forEach(blog => { %>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="<%= blog.CoverImageURL %>" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= blog.title %></h5>
+                        <a href="<%= blog.CoverImageURL %>" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+        
+
+        <%-include('./partials/script') %>
+
+    </body>
 
 </html>
