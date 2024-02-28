@@ -17,7 +17,7 @@ const blogschema = new Schema({
         ref:"user",
     }
 },
-    {timestamps:true}
+    {timestamps:true,strictPopulate:false}
 )
 const blog = model("blogimages",blogschema)
 module.exports = blog

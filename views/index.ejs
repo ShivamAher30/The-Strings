@@ -10,7 +10,7 @@
                     <img class="card-img-top" src="<%= blog.CoverImageURL %>" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title"><%= blog.title %></h5>
-                        <a href="<%= blog.CoverImageURL %>" class="btn btn-primary">Go somewhere</a>
+                        <a href="/blog/<%=blog._id%>" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
             <% }); %>

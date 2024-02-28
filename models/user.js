@@ -20,7 +20,7 @@ const userSchema = new Schema(
         },
         profileImageURL: {
             type: String,
-            default: "/images/default.png",
+            default: "/images/avatar.png",
         },
         role: {
             type: String,
@@ -28,7 +28,7 @@ const userSchema = new Schema(
             default: "USER",
         },
     },
-    { timestamps: true }
+    { timestamps: true,strictPopulate:false}
 );
 
 userSchema.pre("save", function (next) {
