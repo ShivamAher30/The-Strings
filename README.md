@@ -1,8 +1,8 @@
-# Strings Imageboard App 🎉
+# **Strings Imageboard App** 
 
 ## Tech Stack 💻
 
-The Strings Imageboard App is a web application built using the following frameworks and libraries:
+**The Strings Imageboard App** is a web application built using the following frameworks and libraries:
 
 ### Backend
 - **Node.js**: Server-side runtime environment.
