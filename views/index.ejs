@@ -6,11 +6,11 @@
         <%-include('./partials/nav')%>
         <div class="container mt-3">
             <% blog.forEach(blog => { %>
-                <div class="card" style="width: 18rem;height: fit-content; width: fit-content; display: flex; justify-content: center; align-items: center;">
-                    <img class="card-img-top " src="<%= blog.CoverImageURL %>" alt="Card image cap" style="height: 30rem; width: fit-content;">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="<%= blog.CoverImageURL %>" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title"><%= blog.title %></h5>
-                        <a href="/blog/<%=blog._id%>" class="btn btn-primary">Show More</a>
+                        <a href="/blog/<%=blog._id%>" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
             <% }); %>
